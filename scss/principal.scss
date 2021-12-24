@@ -1,0 +1,105 @@
+@import "nosotros";
+@import "ubicacion";
+@import "cervezas";
+@import "vinos";
+@import "otros";
+@import "inicos";
+
+$fondo: rgb(3, 3, 66);
+$letras: blanchedalmond;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    header{
+        background-color: $fondo;
+        .logo1{
+            height: 280px;
+            display: flex;
+            justify-content: center;
+        }
+        nav{
+            background-image: linear-gradient(to top, rgb(3, 3, 66), rgb(3, 3, 66)  );
+        } 
+        #menu{
+            color: $letras;
+            font-size: 22px;
+        }
+        #submenu{
+            background-color: $fondo;
+            color: $letras;
+        }
+        #menu2{
+            transition: 0.5s;
+            color: $letras;
+        &:hover{
+            color: $fondo;
+            transition: 0.5s;
+            }
+        }   
+    }
+    main{
+        background-color: $fondo;
+        padding: 45px;
+        
+        h2{
+            padding-top: 35px;
+            display: grid;
+            font-size: 60px;
+            font-family: 'Merriweather', serif;
+            color: rgb(207, 38, 38);
+            text-align: center;
+            animation-duration: 2s;
+            animation-name: color;
+            animation-iteration-count: infinite;
+        }
+        @keyframes color{
+            0%{
+                color: rgb(255, 238, 0)
+            }
+            100%{
+                color: rgb(207, 38, 38);
+            }
+        }
+    }
+    footer{
+        background-color: $fondo;
+        padding: 45px;
+        p{
+            text-align: center;
+            color: $letras;
+            font-family: 'Merriweather', serif;
+            font-size: large;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;  
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            margin: 7px;
+            transition: 0.5s;
+        &:hover{
+            transform: scale(1.5);
+            }
+        }
+    }
+@media screen and (max-width: 990px) {
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        main{
+            .logo{
+                height: 210px;
+            }
+           
+            h2{
+                font-size: 30px;
+             }
+        
+    }
+}
